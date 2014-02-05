@@ -1,0 +1,17 @@
+# shortcut to this dotfiles path is $BASH
+export BASH=$HOME/dotfiles
+
+# use .localrc for SUPER SECRET CRAP that you don't
+# want in your public, versioned repo.
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
+# load all of our sh files
+config_files=$BASH/**/*.sh
+
+for file in "$BASH/*.sh" "$BASH/**/*.sh"
+do
+  source $file
+done
