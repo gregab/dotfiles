@@ -8,9 +8,7 @@ then
   source ~/.localrc
 fi
 
-# load all of our sh files
-config_files=$BASH/**/*.sh
-
+# load all sh files
 for file in "$BASH/*.sh" "$BASH/**/*.sh"
 do
   source $file
