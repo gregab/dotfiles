@@ -57,6 +57,14 @@ install_dotfiles () {
   backup_all=false
   skip_all=false
 
+  # Sync Vim Snippets. Always delete current snippets.
+  source=$DOTFILES_ROOT/vim/snippets
+  dest=$HOME/.vim/snippets
+  if [ -d $source ]; then
+    rm -rf $dest
+    link_files $source $dest
+  fi
+
   for source in `find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink`
   do
     dest="$HOME/.`basename \"${source%.*}\"`"
