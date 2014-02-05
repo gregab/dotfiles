@@ -9,7 +9,8 @@ then
 fi
 
 # load all sh files
-for file in "$BASH/*.sh" "$BASH/**/*.sh"
+for file in $BASH/*.sh $BASH/**/*.sh
 do
+  echo $file
   source $file
 done
