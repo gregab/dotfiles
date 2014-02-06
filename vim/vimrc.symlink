@@ -30,10 +30,16 @@ set wrapscan
 " Remove trailing whitespace before save
 autocmd BufWritePre *.js :%s/\s\+$//e
 
+" Show trailing whitespace
+nmap <silent> ,stw /\\s\\+$/g<CR>
+
 " set the search scan so that it ignores case when the search is all lower
 " case but recognizes uppercase if it's specified
 set ignorecase
 set smartcase
+
+" Control my own folding destiny.
+set foldmethod=manual
 
 " Have comments on one line cause us to start of the next line with that comment
 " type automagically.

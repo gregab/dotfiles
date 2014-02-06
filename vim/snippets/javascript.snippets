@@ -17,3 +17,47 @@ snippet fu
 snippet fun
 	function(${0}) {
 	}
+snippet div
+	<div>
+		${1}
+	</div>
+snippet span
+	<span>
+	  ${1}
+	</span>
+snippet tag
+	<${1:name}>
+	  ${0}
+	</$1>
+snippet stag
+	<${1} />
+snippet cn
+	className={cx('${1}-atlas/${2}')}
+snippet req
+	var ${1:name} = require('$1');
+snippet areq
+	var ${1:name} = require('$1.atlas');
+snippet aheader
+	/**
+	 * @providesModule $1.atlas
+	 * @fbt {"project": "atlas"}
+	 * @typechecks
+	 * @jsx React.DOM
+	 */
+
+	'use strict';
+
+	var PropTypes = require('React').PropTypes;
+	var React = require('React');
+
+	var ${1:name} = React.createClass({
+	  propTypes: {
+	  },
+
+	  render: function() /*object*/ {
+		return (
+		);
+	  }
+	});
+
+	module.exports = $1;
