@@ -1,5 +1,4 @@
 " Some of this stolen from Derek Wyatt: https://github.com/derekwyatt/vim-config
-
 set expandtab
 set softtabstop=2
 set tabstop=2

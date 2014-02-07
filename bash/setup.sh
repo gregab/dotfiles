@@ -1,8 +1,3 @@
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
-
 # Disable START/STOP output control.
 stty -ixon
 

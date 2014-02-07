@@ -1,16 +1,19 @@
 # shortcut to this dotfiles path is $BASH
 export BASH=$HOME/dotfiles
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	source /etc/bashrc
+fi
+
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
-if [[ -a ~/.localrc ]]
-then
+if [[ -a ~/.localrc ]]; then
   source ~/.localrc
 fi
 
 # load all sh files
 for file in $BASH/*.sh $BASH/**/*.sh
 do
-  echo $file
   source $file
 done
