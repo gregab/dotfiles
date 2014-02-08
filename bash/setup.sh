@@ -22,5 +22,7 @@ alias cp='cp -i'
 export EDITOR=vim
 export GIT_EDITOR=vim
 
+set -o vi
+
 # ignore one-letter typos
 shopt -s cdspell
